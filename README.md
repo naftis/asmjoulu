@@ -1,18 +1,31 @@
-# WebApp Template Project
+# amsjoulu
 
-Minimal scaffolding for quickly setting up the development environment for a new client-side web application project.
+Järjestämme ryhmätilauksen Summer Assemblyille 2013, jotka vietetään 1. - 4. elokuuta.
 
-* Compiles CoffeeScript files from `src/coffee` into `public/js/modules`
-* Compiles Stylus files from `src/stylus` into `public/css`
-* Compiles `src/jade/index.jade` into `public/html`
-* Includes a static server
-* Watches for file changes and recompiles/reloads in browser
-* `.gitignore` for all generated files
-* 3rd party JavaScript libraries go into `public/js/vendor`
+Viime vuonna (2012) ryhmätilaukseen osallistui 23 henkilöä, joista suurin osa istui katsomossa. Osa dataili myös muualla hallissa, eli kaikkien ei täydy lanittaa yhdessä ryhmässä, jos toivoo paikkoja muualta.
 
-## Usage
+Ryhmätilaukseen kannattaa liittyä ensinnäkin sen takia, koska isommat ryhmät saa valita aiemmin paikat areenalta kuin pienemmät ryhmät. Valitsemme parhaat paikat ryhmän jäsenille, ottaen huomioon ilmottautuneiden toiveet. Henkilöt ryhmässä voi myös järjestää kimppakyytejä eri puolelta Suomea, jotta liikkuminen olisi halpaa ja nopeaa.
 
-    $ git clone https://github.com/shangaslammi/webapp-template.git
-    $ cd webapp-template
+  #asmjoulu @ Quakenet
+
+## Installation
+
+    $ git clone https://github.com/naftis/asmjoulu.git
+    $ cd amsjoulu
     $ npm install
-    $ ./grunt
+    $ cp config.example.json config.json
+
+  Create participates.json file
+
+    {
+      "participates": []
+    }
+
+
+  For development & creating static js/html/css files
+
+    $ grunt
+
+  For production
+
+    $ coffee runserver.coffee
