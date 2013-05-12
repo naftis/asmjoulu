@@ -17,7 +17,7 @@ module.exports.createServer = (config) ->
       return true for keypair in config.auth when keypair[0] == user and keypair[1] == pass
       return false
 
-    app.get "/.data/participates.json", auth, (req, res) ->
+    app.get '/.data/participates.json', auth, (req, res) ->
 
       file = fs.readFileSync 'participates.json'
 
@@ -25,7 +25,7 @@ module.exports.createServer = (config) ->
       res.setHeader 'Content-Length', file.length
       res.end file
 
-    app.get "/", (req, res) ->
+    app.get '/', (req, res) ->
       #res.sendfile('public/index.html')
       json = JSON.parse fs.readFileSync 'participates.json'
 
@@ -45,18 +45,33 @@ module.exports.createServer = (config) ->
       res.render 'index',
         participates: sorted
 
-    app.get "/hallitse", (req, res) ->
+    app.get '/hallitse/:file', auth, (req, res) ->
+      file = fs.readFileSync 'backups/' + req.params.file
+
+      res.setHeader 'Content-Type', 'application/json;charset=utf-8'
+      res.setHeader 'Content-Length', file.length
+      res.end file
+
+    app.get '/hallitse', auth, (req, res) ->
       json = fs.readFileSync 'participates.json'
+      file = fs.readdirSync 'backups'
+
+      fileArr = file.sort (a, b) ->
+        b.localeCompare a
 
       res.render 'hallitse',
         jsoncontents: json
+        backups: fileArr
 
-    app.post "/hallitse", (req, res) ->
-      console.log req.body
+    app.post '/hallitse', auth, (req, res) ->
+      # req.body.json
+      currenttime = new Date().getTime()
 
-      json = fs.readFileSync 'participates.json'
+      stream = fs.createReadStream 'participates.json'
+      stream.pipe(fs.createWriteStream 'backups/participates.'+currenttime+'.json')
 
-      res.render 'hallitse',
-        jsoncontents: json
+      stream.on 'close', ->
+        fs.writeFile 'participates.json', req.body.json, (err) ->
+          res.redirect '/hallitse'
 
   return httpd

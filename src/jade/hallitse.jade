@@ -3,14 +3,19 @@ html
   head
   body
     h1 Sup!
-    p
-      | \u00f6 = ö
-      br
-      | \u00e4 = ä
     form(action='', method='post')
-      textarea(name='tissit', cols='100', rows='25')
+      textarea(name='json', cols='100', rows='25')
         | #{jsoncontents}
 
       br
 
       input(type='submit', value='Lähetä')
+
+    hr
+
+    p
+      b Backup-tiedostot:
+      br
+      each x in backups
+        a(href='/hallitse/#{x}') #{x}
+        br
