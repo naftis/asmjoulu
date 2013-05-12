@@ -29,23 +29,23 @@ module.exports = (grunt) ->
     regarde:
       coffee:
         files: ["src/coffee/**/*.coffee"]
-        tasks: ["coffee", "reload"]
+        tasks: ["coffee"]
 
       stylus:
         files: ["src/stylus/*.styl"]
-        tasks: ["stylus", "reload"]
+        tasks: ["stylus"]
 
 #       jade:
 #         files: ["src/jade/*.jade"]
-#         tasks: ["jade", "reload"]
+#         tasks: ["jade"]
 
-    reload:
-      port: 61768
-      proxy:
-        host: 'localhost'
-        port: 30424
+#    reload:
+#      port: 30424
+#      proxy:
+#        host: 'localhost'
+#        port: 61768
 
-  grunt.loadNpmTasks "grunt-reload"
+  #grunt.loadNpmTasks "grunt-reload"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-stylus"
@@ -71,4 +71,4 @@ module.exports = (grunt) ->
     else
       execServer()
 
-  grunt.registerTask "default", ['coffee',  'stylus', 'server', 'reload', 'regarde']
+  grunt.registerTask "default", ['coffee',  'stylus', 'server', 'regarde']
