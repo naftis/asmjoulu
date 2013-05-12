@@ -1,4 +1,4 @@
-# amsjoulu
+# asmjoulu
 
 Järjestämme ryhmätilauksen Summer Assemblyille 2013, jotka vietetään 1. - 4. elokuuta.
 
@@ -11,7 +11,7 @@ Ryhmätilaukseen kannattaa liittyä ensinnäkin sen takia, koska isommat ryhmät
 ## Installation
 
     $ git clone https://github.com/naftis/asmjoulu.git
-    $ cd amsjoulu
+    $ cd asmjoulu
     $ npm install
     $ cp config.example.json config.json
 
