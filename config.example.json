@@ -1,0 +1,6 @@
+{
+  "auth": [
+    ["admin", "password"],
+    ["foo", "bar"]
+  ]
+}

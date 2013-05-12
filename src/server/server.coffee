@@ -1,7 +1,7 @@
 express = require 'express'
 fs = require 'fs'
 
-module.exports.createServer = () ->
+module.exports.createServer = (config) ->
   app     = express()
   httpd   = require('http').createServer(app)
 
@@ -14,8 +14,8 @@ module.exports.createServer = () ->
     app.use express.bodyParser()
     
     auth = express.basicAuth (user, pass) ->
-      (user is 'xxx' && pass is 'xxxx') or
-      (user is 'aaa' && pass is 'aaaa')
+      return true for keypair in config.auth when keypair[0] == user and keypair[1] == pass
+      return false
 
     app.get "/.data/participates.json", auth, (req, res) ->
 
