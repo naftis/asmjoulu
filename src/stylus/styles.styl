@@ -1,0 +1,434 @@
+body, html
+  width 100%
+
+body
+  margin 0
+  background-image url('../img/strip2.png'), url('../img/lightlightgraypaper.png')
+  background-repeat repeat-x, repeat
+  color #303030
+  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+  line-height 20px
+  font-size 14px
+
+h1, h2
+  font-family 'Century Gothic', 'Myriad Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin 0
+
+h1
+  text-align center
+  font-size 36px
+  text-shadow 2px -2px 0 rgba(0, 0, 0, 0.2)
+  font-size 62px
+  font-weight 100
+  margin 20px 0 30px 0
+  line-height 62px
+
+h2
+  margin-top 10px
+  text-shadow 1px -1px 0 rgba(0, 0, 0, 0.2)
+  font-size 28px
+  font-weight bold
+  line-height 30px
+
+h2.info, h2.shout, h2.time, h2.participates, h2.rides
+  background-position left center
+  background-repeat no-repeat
+  padding-left 40px
+  margin-left -40px
+  color #000
+  opacity 0.75
+
+h2.info
+  background-image url("../img/icons/glyphicons_194_circle_question_mark.png")
+
+h2.shout
+  background-image url("../img/icons/glyphicons_196_circle_exclamation_mark.png")
+
+h2.time
+  background-image url("../img/icons/glyphicons_054_clock.png")
+
+h2.participates
+  background-image url("../img/icons/glyphicons_003_user.png")
+
+h2.rides
+  background-image url("../img/icons/glyphicons_005_car.png")
+
+#images
+  background url("../img/strip.png") repeat-x
+  -webkit-box-shadow 0 0 15px 0 #000
+  box-shadow 0 0 15px 0 #000
+  height 100px
+  overflow hidden
+
+.body
+  margin 0px auto 0 auto
+  width 1200px
+
+  #left, #right
+    float left
+
+  #left
+    width 670px
+    margin-right 50px
+
+  #right
+    width 480px
+
+#line
+  //background url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPgogICAgICAgIDxwYXR0ZXJuIGlkPSJyYWluYm93IiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjEwMCUiPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojMTcyMzI3Ii8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMjAiIHdpZHRoPSIzOSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojMTkzNzJjIi8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iNTkiIHdpZHRoPSIxMiIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojMzI3MzQ0Ii8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iNzEiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojNDM3ZTRjIi8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iODciIHdpZHRoPSIyOCIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojODY5OTU2Ii8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMTE1IiB3aWR0aD0iMzUiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2IwOGY0MiIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjE1MCIgd2lkdGg9IjEiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2I0NjgzOSIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjE1MSIgd2lkdGg9IjI5IiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOiNhNDM5NDEiLz4KICAgICAgICAgICAgICAgICAgICA8cmVjdCB4PSIxODAiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojOWMyYzUyIi8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMTk1IiB3aWR0aD0iMjIiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6I2JiNDI2YiIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjIxNyIgd2lkdGg9IjIzIiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOiM4YTJmNWMiLz4KICAgICAgICAgICAgICAgICAgICA8cmVjdCB4PSIyNDAiIHdpZHRoPSI2MCIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojNmQ0MTZkIi8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMzAwIiB3aWR0aD0iNCIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojNDEzMjY0Ii8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iMzA0IiB3aWR0aD0iNjAiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzI5NDE2ZSIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjM2NCIgd2lkdGg9IjM5IiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOiM1NjkwYTUiLz4KICAgICAgICAgICAgICAgICAgICA8cmVjdCB4PSI0MDMiIHdpZHRoPSIxOSIgaGVpZ2h0PSIxMDAlIiBzdHlsZT0iZmlsbDojMmU4NDlkIi8+CiAgICAgICAgICAgICAgICAgICAgPHJlY3QgeD0iNDIyIiB3aWR0aD0iMjIiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzI3NjY4NiIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjQ0NCIgd2lkdGg9IjAiIGhlaWdodD0iMTAwJSIgc3R5bGU9ImZpbGw6IzIzNDM2ZSIvPgogICAgICAgICAgICAgICAgICAgIDxyZWN0IHg9IjQ0NCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjEwMCUiIHN0eWxlPSJmaWxsOiMxNDJhMDYiLz4KICAgICAgICAgICAgICAgIDwvcGF0dGVybj4KICAgIDwvZGVmcz4KICAgIDxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcmFpbmJvdykiIC8+Cjwvc3ZnPgo=")
+  background #5741A8
+  height 5px
+  width 100%
+  margin 30px 0 0 0 
+
+#content
+  margin 15px 0 15px 0
+
+#apply
+  .caption
+    font-style italic
+    font-size 0.8em
+    padding-left 10px
+    white-space pre
+
+  input[type='text']
+    width 460px
+    height 50px
+    font-size 20px
+    padding 0 0 0 5px
+    border 1px solid #CCC
+
+    box-shadow inset 1px 1px 1px rgba(227, 95, 53, 0.3)
+    box-shadow 0px 3px 0px rgba(255, 255, 255, 0.4)
+
+    color #3A3B3C
+    margin 7px 0 7px 0
+    border-radius 4px
+
+  #select
+    width 160px
+    height 50px
+
+    box-shadow inset 1px 1px 1px rgba(227, 95, 53, 0.3)
+    box-shadow 0px 3px 0px rgba(255, 255, 255, 0.4)
+    display inline-block
+    padding 0 0 0 5px
+
+
+  input[type='submit']
+    background #5741A8
+    border-top 1px solid #45388C
+    border-right 1px solid #311F4D
+    border-bottom 1px solid #201533
+    border-left 1px solid #311F4D
+    border-radius 4px
+
+    -webkit-box-shadow inset 0 1px 10px 1px #793ED6, 0px 1px 0 #2C1D4D, 0 6px 0px #341F53, 0 8px 4px 1px #111111
+    box-shadow inset 0 1px 10px 1px #793ED6, 0px 1px 0 #2C1D4D, 0 6px 0px #341F53, 0 8px 4px 1px #111111
+
+    color #fff
+    font bold 20px/1 'Helvetica Neue', Helvetica, Arial, sans-serif
+    margin-top 10px
+    padding 10px 0 12px 0
+    text-align center
+    text-shadow 0px -1px 1px #351E4D
+    width 150px
+    -webkit-background-clip padding-box
+
+  input[type='submit']:hover
+    -webkit-box-shadow inset 0 0px 20px 1px #8952E3, 0px 1px 0 #301D4D, 0 6px 0px #361F53, 0 8px 4px 1px #111111
+    box-shadow inset 0 0px 20px 1px #8952E3, 0px 1px 0 #301D4D, 0 6px 0px #361F53, 0 8px 4px 1px #111111
+    cursor pointer
+
+  input[type='submit']:active
+    -webkit-box-shadow inset 0 1px 10px 1px #793ED6, 0 1px 0 #351D4D, 0 2px 0 #391F53, 0 4px 3px 0 #111111
+    box-shadow inset 0 1px 10px 1px #793ED6, 0 1px 0 #351D4D, 0 2px 0 #391F53, 0 4px 3px 0 #111111
+    margin-top 6px
+
+::-webkit-input-placeholder
+  color #A9A9A9
+:-moz-placeholder
+  color #A9A9A9
+::-moz-placeholder
+  color #A9A9A9
+:-ms-input-placeholder
+  color #A9A9A9
+
+ul li
+  list-style none
+  list-style-type disc
+  margin-bottom 0
+  padding-top 2px
+
+table
+  margin 10px 0 0 0
+  width 100%
+  background #fff
+  border-spacing 0 0
+  border 1px solid #CBCBCB
+
+  td, th
+    padding 5px
+    text-align left
+
+  tr:nth-child(even)
+    background #F0F0F0
+    border-left 1px solid red
+    border-right 1px solid red
+
+  tr:nth-child(odd)
+    background #FFF
+
+
+  td.color
+    padding-left 30px
+    background-repeat no-repeat
+    background-position 30% 30%
+
+  td.color.certainly
+    background-image url("../img/certainly.png")
+
+  td.color.likely
+    background-image url("../img/likely.png")
+
+  td.color.maybe
+    background-image url("../img/maybe.png")
+
+  td.color.not
+    background-image url("../img/not.png")
+
+#logo
+  margin 120px 0 20px 0
+  text-align center
+  width 100%
+
+  img
+    max-width 95%
+
+
+// RESPONSIVE
+
+@-ms-viewport
+  width device-width
+
+*
+  word-wrap break-word
+
+table#people tr td:nth-child(2)
+  font-weight bold
+
+img
+  height auto
+  max-width 100%
+
+// < 1200px
+@media (min-width: 980px) and (max-width: 1200px)
+  .body
+    width 960px
+    padding 0 10px
+
+    #left
+      width 540px
+      margin-right 40px
+
+    #right
+      width 380px
+
+  table#people
+    font-size 14px
+
+// Tablet
+@media (min-width: 768px) and (max-width: 979px)
+  .body
+    width 720px
+    padding 0 20px
+
+    #left
+      width 400px
+      margin-right 20px
+
+    #right
+      width 300px
+
+  table#people
+    font-size 13px
+    max-width 720px
+
+    tr
+      td:before
+        margin-left -320px
+        
+      th:nth-child(7),
+      th:nth-child(8),
+      th:nth-child(9),
+      th:nth-child(10),
+      td:nth-child(7),
+      td:nth-child(8),
+      td:nth-child(9),
+      td:nth-child(10)
+        display none
+
+      th:nth-child(1),
+      td:nth-child(1)
+        width 25px
+
+      th:nth-child(2),
+      td:nth-child(2)
+        width 110px
+
+      th:nth-child(3),
+      td:nth-child(3)
+        width 160px
+
+      th:nth-child(4),
+      td:nth-child(4)
+        width 110px
+
+      th:nth-child(5),
+      td:nth-child(5)
+        width 120px
+
+      th:nth-child(5)
+        padding-right 30px
+
+      th:nth-child(6),
+      td:nth-child(6)
+        width 100px
+
+  table
+    td, th
+      padding 10px 5px
+      display block
+      float left
+
+// Puhelin
+@media (max-width: 767px)
+  .body
+    width 95%
+    padding 0 2%
+    #left
+      width 100%
+      margin-right 0
+    #right
+      width 100%
+
+  #content
+    width 100%
+
+  table#people
+    font-size 14px
+    width 100%
+    th
+      display none
+    tr
+      overflow visible
+      border-bottom 1px solid #ccc
+      width 100%
+      td
+        min-height 16px
+        &:nth-child(1)
+          padding-left 20px
+          width 8%
+          font-size 12px
+        &:nth-child(2)
+          width 38%
+        &:nth-child(5)
+          width 38%
+          padding-left 30px
+          background-position center left
+          font-size 0px
+          position absolute
+          left 0
+          width 1px
+          display none
+
+        &:before
+          margin-left -41%
+
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10)
+          display none
+          min-width 50px
+          min-height 16px
+
+      th
+        &:nth-child(1)
+          padding-left 20px
+          width 8%
+          display block
+        &:nth-child(2)
+          width 38%
+          display block
+        &:nth-child(6)
+          width 25%
+          display block
+
+  table td, table th
+    padding 10px 5px
+    display block
+    float left
+
+  h2.info,
+  h2.shout,
+  h2.time,
+  h2.participates,
+  h2.rides
+    margin-left 0px
+
+// Tablet & puhelin
+@media (max-width: 979px)
+  table
+    td
+      min-height 20px
+
+  table#people
+    tr.click
+      td
+        width 50%
+        padding-left 49%
+        font-size 14px
+        border-bottom 1px solid #ccc
+        display block
+        
+        &:nth-of-type(3)
+          border-top 1px solid #ccc
+        &:nth-of-type(3):before
+          content "Nimi"
+        &:nth-of-type(4):before
+          content "Paikkakunta"
+        &:nth-of-type(5):before
+          content "Tulossa"
+        &:nth-of-type(6):before
+          content "Ryhmä"
+        &:nth-child(5)
+          background-position right center
+          position inherit
+          width 50%
+        &:nth-child(1)
+          width 8%
+          padding-left 20px
+          border-bottom 0
+        &:nth-child(2)
+          padding-left 5px
+          border-bottom 0
+
+        &:nth-of-type(7):before
+          content "Paikkatoiveet"
+        &:nth-of-type(8):before
+          content "Paikka"
+        &:nth-of-type(9):before
+          content "Muuta?"
+        &:nth-of-type(10):before
+          content "Maksettu"
+        &:before
+          font-size 13px
+          position absolute
+          width 45%
+          padding-right 10px
+          white-space nowrap
+          text-align left
+          font-weight bold

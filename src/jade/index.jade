@@ -1,0 +1,142 @@
+doctype 5
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+    link(rel='stylesheet', type='text/css', href='css/styles.css')
+
+    script(type='text/javascript', src='js/vendor/require.js')
+    script(type='text/javascript')
+      require.config({
+        baseUrl: "js/modules",
+        paths: {
+          'jquery': 'https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min'
+        },
+        shim: { }
+      });
+    title Summer Assembly 2013 ryhmätilaus!
+  body
+    div#logo
+      img(src='img/asmjoulu.png', alt='asmjoulu')
+
+    .body
+      #left
+        h2.info Tietoa
+
+        p
+          | Järjestämme ryhmätilauksen 
+          b Summer Assemblyille 2013
+          | , jotka vietetään 1. - 4. elokuuta.
+        p
+          | Viime vuonna (2012) ryhmätilaukseen osallistui 23 henkilöä, joista suurin osa istui katsomossa.
+          | Osa dataili myös muualla hallissa, eli kaikkien ei täydy lanittaa yhdessä ryhmässä, jos toivoo paikkoja muualta.
+        p
+          | Ryhmätilaukseen kannattaa liittyä ensinnäkin sen takia, koska isommat ryhmät saa valita aiemmin paikat areenalta kuin pienemmät ryhmät.
+          | Valitsemme parhaat paikat ryhmän jäsenille, ottaen huomioon ilmottautuneiden toiveet.
+          | Henkilöt ryhmässä voi myös järjestää kimppakyytejä eri puolelta Suomea, jotta liikkuminen olisi halpaa ja nopeaa.
+        p
+          | #asmjoulu @ Quakenet
+
+
+        h2.time Ajankohdat
+        p
+          b Viimeinen ilmottautumispäivä: 
+          | 17.5.2013 ?
+          br
+          b Viimeinen maksupäivä: 
+          | 18.5.2013 ?
+          br
+          b Lippujen tilaus: 
+          | 26.5.2013 ?
+          br
+          b Lopulliset konepaikat julki: 
+          | 22.6.2013
+          br
+          b Lippujen jako aloitetaan: 
+          | 1.7.2013
+          br
+          b Assembly Summer: 
+          | 1.8.2013 - 4.8.2013
+          br
+          br
+          | Kysymysmerkillä ilmoitetut päivämäärät voivat muuttua vielä muutamilla päivillä.
+
+        //-h3 Mistä nimi &#8221;<i>asmjoulu</i>&#8221; tulee?
+        //-p
+        //-  | Nimestä voisi päätellä että ryhmätilaus on Winter Assemblyille, mutta toistaiseksi emme sinne ole järjestäneet mitään.
+        //-  | Suuri osa viime vuonna ilmottautuneista oli ollut jollain tavalla mukana vanhan JouluServerin toiminnassa, joten nimi johdettiin nopeasti siitä.
+        //-  | Kun parempia nimiehdotuksia ei tullut, nimi jäi pysyväksi osaksi ryhmää.
+
+      #right
+        h2.shout Ilmoittaudu!
+        p
+          | Ilmoittautuminen on melko sitovaa.
+          | Järjestämme ryhmätilauksen täysin vapaaehtoisvoimin, joten jos haluaa perua ilmottautumisensa, tulisi se tehdä hyvissä ajoin.
+
+        p
+          | Ilmoittautua voit lähettämällä sähköpostia osoitteeseen <b>info@asmjoulu.fi</b>.
+          | Aseta otsikoksi oikea nimesi.
+          br
+          | Viestissä tulisi ilmoittaa seuraavat asiat selkeästi:
+
+        ul
+          li Etu- ja sukunimesi
+          li Nimimerkkisi
+          li Mistä saavut assyille
+          li Kuinka varmasti olet tulossa (tuskin, ehkä, todennäköisesti, varmasti jne.)
+          li Ryhmäsi nimi (sopikaa ryhmän kanssa, istut heidän kanssaan)
+          li Sähköposti (muista tämä erityisesti jos ilmoitat kaverisi)
+          li Puhelinnumero
+          li Muuta
+          li
+            b Haluatko, että oikea nimesi ilmoitetaan tällä sivulla? 
+            | Puhelinnumeroasi ei julkaista missään.
+        p(style='font-size: 25px')
+          b HUOM! 
+          | Maksun eräpäivä 
+          b 18.5.2013!
+      div(style='clear: both')
+
+      div#content
+        h2.participates Ilmoittautuneet
+        table#people
+          tbody
+            tr
+              th #
+              th Nimimerkki
+              th Nimi
+              th Sijainti
+              th Maksettu
+              th Ryhmä
+              th Paikkatoiveet
+              th Paikka
+              th Muuta
+
+            - var count = 0
+            each x in participates
+              - count += 1
+
+              tr
+                td= count
+                td= x.nick
+
+                if x.showname == 1
+                  td= x.name
+                else
+                  td
+
+                td= x.location
+
+                if x.paid == 1
+                  td.color.certainly
+                else
+                  td.color.not
+
+                td= x.group
+                td= x.wishes
+                td= x.place
+                td= x.other
+
+    script(type='text/javascript')
+      require(['app'], function(app){ app.main() })
